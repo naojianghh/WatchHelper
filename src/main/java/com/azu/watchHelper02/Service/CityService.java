@@ -5,10 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CityService {
+
+    private static final String PATH = "/city";
+
     @Autowired
     private BaseService baseService;
 
     public String getCities() {
-        return baseService.sendGetRequest("/city", null);
+        return baseService.sendGetRequest(PATH, null);
     }
 }
